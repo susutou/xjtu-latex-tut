@@ -1,0 +1,89 @@
+% !Mode:: "TeX:UTF-8"
+% The first line is for editors like, WinEdt, to specify the encoding
+
+\section{快速入门}
+在这一节里，我将根据自己的使用经验，写一个\LaTeX{}的快速入门，让同学们能在较短的时间里开始使用\LaTeX{}。
+\subsection{基本概念}
+本文中可能出现一些术语，在这里事先解释一下。
+\begin{description}
+\item[\TeX] \TeX{}是由Prof.~Donald E. Knuth创造的一套排版系统，最初的目的是为了排版他的巨著《计算机程序设计艺术》
+(\emph{The Art of Computer Programming})第二卷。在第一版出版的时候，使用的还是活字排版，但到第二版付印之时，
+出版本书的Addison-Wesley出版社已经换用了计算机排版系统，Knuth教授发现新的排版系统把他的巨作排得很差，他一怒之下，
+决定自己写一个排版系统，也就成就了后来的\TeX{}。\TeX{}源于希腊字母$\tau\epsilon\chi$，在希腊语中是科学和艺术的意思。
+\TeX{}提供了若干底层排版命令，是一套强大的宏语言，可以在其上定义更高层的排版命令。为了方便使用，Knuth自己编写了
+一套宏，称为Plain \TeX{}，但还是不够方便，于是有了后来的\LaTeX{}。
+
+\item[\LaTeX] \LaTeX{}是Leslie Lamport在\TeX{}之上编写的一组宏包(package)，目的是将内容和格式分离，并且根据科技论文的
+排版需求，提供了很多环境，如列表、定义、证明等。\LaTeX{}还提供了方便的交叉引用机制，为文章的写作提供了很大的方便。
+目前\LaTeX{}的最新版本是~\LaTeXe{}。
+
+\item[文类] 文类是定义文档类型的文件，是使用\TeX{}和\LaTeX{}命令编写的，其扩展名为\cmd{.cls}，其作用是提供某种
+文档样式的规范，比如页边距、行距、字体和字号、标题格式等许多定义文档样式的参数。
+
+\item[命令] \LaTeX{}源文件是用文本和命令编写而成的，命令是用来告诉\LaTeX{}应该执行怎样的排版操作。\LaTeX{}的命令
+都是由反斜杠符号\cmd{\textbackslash}加上一串英文字母构成的，字母区分大小写。
+
+\item[宏包] 由于\TeX{}是一种宏语言，从而可以通过宏定义扩展其功能，存储这些宏的文件就称为宏包，其扩展名为\cmd{.sty}。
+许多强大的功能都是使用前人编写的宏包来完成的。
+
+\item[衬线体] 衬线体(serif)是有衬线的字体，衬线就是字脚的装饰部分，
+英文中的衬线体如图~\ref{fig:enserif}~所示\footnote{图像来源：\url{http://en.wikipedia.org/wiki/Serif}}，
+从上到下依次是无衬线体、衬线体以及衬线用红色标出的衬线体；
+中文中的衬线体如图~\ref{fig:zhserif}~所示，从左到右依次是衬线用红色标出的衬线体、衬线体以及无衬线体。
+据说，衬线来源于上古时代的书法家使用树枝或石块在泥土上写字所留下的字脚装饰。
+衬线体一般用于正文，其可读性较强，并且被认为比较正统。
+
+\item[无衬线体] 无衬线体(Sans-serif)是没有衬线的字体，英文中的无衬线体如图~\ref{fig:enserif}~所示，其中最上面的字体为无衬线体；
+中文中的无衬线体如图~\ref{fig:zhserif}~所示，最右边的字体为无衬线体。无衬线体一般用于标题或标志牌。
+
+\begin{figure}[!h]
+\centering
+\subfloat[英文的衬线体与无衬线体]{
+  \label{fig:enserif}
+  \includegraphics[width=0.4\textwidth]{figures/Eng_serif.eps}
+}
+\hspace{0.1\textwidth}
+\subfloat[中文的衬线体与无衬线体]{
+  \label{fig:zhserif}
+  \includegraphics[width=0.4\textwidth]{figures/Chinese_serif.eps}
+}
+\caption{衬线体与无衬线体}
+\label{fig:serif}
+\end{figure}
+
+\item[等宽字体] 等宽字体(monospaced font)是指每个字符宽度相同的字体，与之相对的是每个字符宽度不尽相同的字体，
+称为比例字体(proportional font)，
+如图~\ref{fig:promono}~所示\footnote{图像来源：\url{http://zh.wikipedia.org/wiki/File:Propvsmono.svg}}，
+上面的是比例字体(Minion Pro)，下面的是等宽字体(Courier)。
+一般来说，比例字体的可读性较强，但是早期由于技术限制，打字机或计算机使用的为等宽字体。
+目前等宽字体使用较多的场合是用于显示程序代码。
+
+\begin{figure}[!h]
+\centering
+\includegraphics[width=0.6\textwidth]{figures/monospace.eps}
+\caption{比例字体与等宽字体}
+\label{fig:promono}
+\end{figure}
+
+\end{description}
+
+\subsection{文档结构}
+本节主要介绍\LaTeX{}的文档结构。基本的文档结构如下：
+\begin{quote}
+\begin{verbatim}
+\documentclass[文类选项]{文类}
+\usepackage[宏包选项]{宏包}
+% 导言区
+\begin{document}
+% 正文区
+\end{document}
+\end{verbatim}
+\end{quote}
+
+\subsection{特殊符号}
+
+\subsection{插图}
+
+\subsection{交叉引用}
+
+\subsection{中文的处理} 

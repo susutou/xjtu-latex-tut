@@ -1,0 +1,50 @@
+% !Mode:: "TeX:UTF-8"
+% The first line is for editors like, WinEdt, to specify the encoding
+\documentclass[a4paper,11pt]{article}
+\usepackage[a4paper,vmargin=1in,hmargin=1.5in]{geometry}
+
+\usepackage[
+    colorlinks,linkcolor=blue,anchorcolor=blue,citecolor=green,
+    pdfauthor={Susen Zhao <zhaosusen@gmail.com>}, pdftitle={LaTeX入门教程: 介绍}
+    ]{hyperref}
+
+\usepackage{fontspec,xltxtra,xunicode}
+\usepackage{xeCJK}
+\defaultfontfeatures{Mapping=tex-text}
+% set Chinese fonts
+\setCJKmainfont[BoldFont={Adobe 黑体 Std},ItalicFont={Adobe 楷体 Std}]{Adobe 宋体 Std}
+\setCJKsansfont{Adobe 黑体 Std}
+\setCJKmonofont{Adobe 仿宋 Std}
+% set western fonts
+\setmainfont{Adobe Garamond Pro}
+
+\usepackage{listings}
+\usepackage{xcolor}
+\usepackage{graphicx}
+\usepackage{subfig}
+\usepackage{fancyhdr}
+\usepackage{caption}
+\usepackage{amsmath}
+
+\newcommand{\cmd}[1]{~\texttt{#1}~}
+
+\setlength{\parindent}{22pt}
+\linespread{1.25}\selectfont
+
+\DeclareCaptionLabelFormat{figcaption}{\textbf{图}~#2~}
+\captionsetup[figure]{labelformat=figcaption,labelsep=space}
+
+\title{用\LaTeX{}写漂亮的实验报告}
+\author{\textsc{Susen Zhao}\\
+\href{mailto:zhaosusen@gmail.com}{\small\texttt{zhaosusen@gmail.com}}}
+\date{}
+
+\begin{document}
+
+\maketitle
+\tableofcontents
+
+\input{intro.tex}
+\input{beginner.tex}
+
+\end{document}
